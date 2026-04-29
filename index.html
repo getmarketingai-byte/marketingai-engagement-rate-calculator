@@ -655,6 +655,7 @@
   }
 
   function calculate() {
+    if (typeof gtag === "function") { gtag("event", "calculator_submit", {calculator_name: "engagement_rate_calculator", page_title: document.title}); }
     var engRaw = document.getElementById('engagements').value.trim();
     var audRaw = document.getElementById('audience').value.trim();
 
